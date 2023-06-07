@@ -1,0 +1,567 @@
+<!--
+
+  OUTSTANDING LESSONS LEARNED
+
+  * The Lang attribute:
+        assist {screen readers} in identifying the language of the page.
+
+
+
+  * Meta element:
+        I had more familiarity with meta.
+        It is used to specify information about the page, such as the title, description, keywords, and author, viewport definition, description definition, character encoding.
+
+        a viewport definition tells the browser how to render the page.
+        Including one betters visual accessibility on mobile, 
+        and improves SEO (search engine optimization).
+
+        the description definition is an important meta element for accessibility and SEO. The value of the "content attribute" is used by {search engines} to provide a description of your page.
+
+
+
+  * Title element(screen-reader):
+        the title element is useful for screen readers to understand the content of a page. Furthermore, it is an important part of SEO.
+
+
+
+  * Navigation:
+        Navigation is a core part of accessibility, and {screen readers} rely on you to provide the structure of your page. This is accomplished with semantic HTML elements e.g header, main, footer elements e.t.c 
+
+        header element will be used to introduce the page, as well as provide a navigation menu.
+
+
+
+  * A property of SVG images:
+        A useful property of an SVG (scalable vector graphics) is that 
+        it contains a path attribute which allows the image to be scaled 
+        without affecting the resolution of the resultant image.
+
+
+
+  * aspect-ration property:
+        The aspect ratio of an element describes 
+        the proportional relationship between its width and its height.
+
+        aspect-ration: auto|initial|inherit|revert|revert-layer|unset|<ratio>
+
+        The box's preferred aspect ratio is the specified ratio of width / height. If height and the preceding slash character are omitted, height defaults to 1.
+
+
+
+  * the max/min function:
+        using this function to choose between two or more values 
+        depending on which is maximum/minumum.
+
+        In this function is a list of comma separated values
+        where which the maximum/minumum value is chosen
+
+
+
+  * max-width/min-width propety (wrap-around control):
+
+        with width property, e.g {width: 500px}...
+        when the browser window is smaller than the width of the element (500px). 
+        The browser then adds a horizontal scrollbar to the page.
+
+        But if you don't want this scrolling, 
+        you can set {max-width: 500px}....
+        when the browser window is smaller than the width of the element (500px), the element will wrap around.
+        Meaning "max-width property" specifies when to start wrapping.
+        Meaning the maximum width to get to before wrapping starts.
+
+        "min-width property" specifies 
+        when to stop wrapping and 
+        add the horizontal scroll bar feature. pretty cool
+        Meaning the minimum width to get to before the 
+        horizontal scrolling feature is added.
+
+
+
+  * section element (semantically separating form element):
+        Just like fieldset element,
+        section element separate the content within the form
+        but does this semantically.
+        that is you wont see physical changes
+
+  
+
+  * role attribute:
+        To increase the page accessibility, 
+        the role attribute can be used to indicate the purpose 
+        behind an element on the page to assistive technologies.
+        The role attribute is a part of the Web Accessibility Initiative (WAI), """ and accepts preset values """.
+        I used the region value on the section element
+
+
+
+  * aria-labelledby attribute:
+        This attribute, labels a region.
+        Every region role requires a visible label, which should be referenced by the aria-labelledby attribute.
+
+
+
+  * nav element:
+        This is a container which contains text,
+        that can be used to move to different part of
+        the page.
+
+        Whereby the text can act as a link to different
+        part of the page.
+        anchor tags is used on the text,
+        with the id of the "element to link to" as its href attribute.
+
+
+
+  * "label element" to "input element" (for attribute):
+        It is important to link each input to the corresponding label element.
+        This provides assistive technology users with a visual reference to the input.
+
+        This is done by giving the label a for attribute, which contains the id of the input.
+
+
+
+  * Best practice (input element):
+        Keeping in mind best-practices for form inputs, give each input an appropriate type and name attribute.
+        also using required property if needed
+
+
+
+  * NOT Best practice (placeholder property):
+        Now, be sure to note why is not best for accessibility.
+
+        using placeholder property is actually not a best-practice for accessibility;
+        too often, users confuse the placeholder text with an actual input value - they think there is already a value in the input.
+
+
+
+  * position property:
+        This property is a dual property.
+        It is affiliated with another type of property that 
+        specifies actual position of the element
+
+        The "position property" specifies the type of 
+        positioning method used for an element (static, relative, fixed, absolute or sticky). 
+        Elements are then positioned using the "top, bottom, left, and right properties". 
+        However, these properties will not work unless the position property is set first. 
+        They also work differently depending on the position value.
+
+        position: static|relative|fixed|absolute|sticky
+
+
+
+  * Positioning things on image:
+        You can even position text on an image, with this trick.
+        setting up a container to house the image and text. then position text relative to container by using the 'absolute value'...Pretty Cool.
+
+        you can reduce the opacity of the image.
+
+
+
+  * overflow property:
+        The CSS overflow property controls what happens to 
+        content that is too big to fit into an area. 
+        The overflow property specifies whether to clip the content or to add scrollbars 
+        when the content of an element is too big to fit in the specified area.
+
+        overflow: visible|hidden|scroll|auto
+        overflow-x: specifies what to do with the left/right edges of the content.
+        overflow-y: specifies what to do with the top/bottom edges of the content.
+
+
+
+  * clip property:
+        The clip property lets you specify a rectangle 
+        to clip an absolutely positioned element. This rectangle act as a window, 
+        only through this rectangle, can you see the element.
+
+        The rectangle is specified as four coordinates, 
+        all from the top-left corner of the element to be clipped.
+
+        similar to overflow: hidden,
+        but this time, instead of clipping based on the size of the
+        element. you can specify a box size to clip the element.
+
+        Think of it like putting a rectangle on the element.
+
+        Note: overflow should not be visible
+              position should be absolute
+
+
+
+  * white-space property:
+        The white-space property specifies how white-space inside an element is handled. 
+        it also specifies how characters behave in an element. 
+        do that stay as they are, wrap around, no wraping at all e.t.c
+
+        white-space: normal|nowrap|pre|pre-line|pre-wrap|initial|inherit;
+
+
+            normal: Sequences of whitespace will collapse into a single whitespace. 
+                    Text will wrap when necessary. This is default
+            
+            nowrap: Sequences of whitespace will collapse into a single whitespace. 
+                    Text will never wrap to the next line. 
+                    The text continues on the same line until a <br> tag is encountered.
+            
+            pre: Whitespace is preserved by the browser. 
+                 Text will only wrap on line breaks. Acts like the <pre> tag in HTML
+
+            pre-line: Sequences of whitespace will collapse into a single whitespace. 
+                      Text will wrap when necessary, and on line breaks
+
+            pre-wrap: Whitespace is preserved by the browser. 
+                      Text will wrap when necessary, and on line breaks
+
+            initial: Sets this property to its default value.
+
+            inherit: Inherits this property from its parent element.
+
+
+
+  * Text only the Screen Reader can read:
+        This is actually an impressive technique.
+
+        .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          white-space: nowrap;
+          
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+
+          padding: 0;
+          margin: -1px;
+          border: 0;
+        }
+
+        think about it.
+
+        we make the text position absolute so it takes real space
+        on the page. meaning all things can be in the space where
+        the text is. meaning there can be overlap
+
+        Next, we made the width and height of the element so small.
+
+        Next, we specify nowrapping for the text.
+
+        Next, we use overflow to clip out text outside the element
+        size which is 1px by 1px. this means the text will not show.
+
+        Next, we clip the element completely, no window.
+
+        Actually, with position, overflow and clip we can achieve the same result.
+
+
+
+
+  * ::before, ::after pseudoelement,:
+
+        This guess target immediately after/before
+        an element. they are initially empty, except styled otherwise
+
+
+  * Content property:
+
+        The content property can be used with the ::before, ::after pseudoelement
+        to insert generated content to the target element
+
+        content: normal|none|counter|attr|string|open-quote|close-quote|no-open-quote|no-close-quote|url|initial|inherit;
+
+
+
+
+  * footer/address element:
+
+        The footer element is a container for 
+        a collection of content that is related to the page,
+
+        the address element is a container for contact 
+        information for the author of the page.
+
+
+
+  * Constrast (visual accessibility):
+
+        We measure contrast between text/graphics 
+        against the background color/ background image
+        This is called CONSTRAST RATIO
+
+        A white text on a white background has a 
+        contrast ratio of 1. This is impossible to perceive.
+
+        Black text on a white background has a contrast ratio of 21. 
+
+        There is no perfect ratio. According to Apple, 
+        we should strive for a minimum of 4.5, 
+        although 7 is preferred.
+
+        To measure contrast on text on top of a background image, 
+        we need to find the brightest or darkest part of the image. 
+        If the text is bright, look for the brightest part and vice versa.
+
+        Any interactive component has different states – 
+        hover, focus, active, unvisited, visited and deactivated. 
+        Remember to ensure that the states also have good contrast.
+
+        Online tools: 
+              "contrast-ratio.com" -> supports multiple color format (RGB, HSL, hex, RGBA) 
+              "color picker from webfx.com"
+              "htmlcolors/color-converter"
+
+
+
+
+  * Cursor property:
+
+        This specifies how the mouse cursor would
+        be displayed when pointing over an element.
+
+        There are like 30 different mouse cursor display. PRETTY COOL!!
+
+
+
+
+
+  * display: inline VS display: inline-block
+
+        Compared to "inline", the major difference is that
+        "inline-block" allows to set a width and height on the element.
+
+        Also, with "inline-block", 
+        the top and bottom margins/paddings are respected
+        whereas with "inline" they are not
+
+
+
+
+  * display: block VS display: inline-block
+
+        Compared to "block", 
+        the major difference is that "inline-block" 
+        does not add a line-break after the element, 
+        so the element can sit next to other elements.
+
+
+
+
+  * scroll-behaviour property:
+
+        Clicking on the navigation links should jump 
+        the viewport to the relevant section. 
+        However, this jumping can be disorienting for some users.
+
+        The scroll-behavior property specifies 
+        whether to smoothly animate the scroll position, 
+        instead of a straight jump, 
+        when the user clicks on a link within a scrollable box.
+
+        By setting scroll-behavior: smooth
+
+
+
+  * Media-rule (prefers-reduced-motion):
+
+        Setting the scroll-behavior to smooth is preferred by most users.
+        However, some users find this to be too slow, 
+        and prefer to have the scrolling happen instantaneously.
+
+        There exists a media rule to set CSS based on the user's browser settings called 
+        PREFERS-REDUCED-MOTION
+
+        This accepts one of two values "reduce" & "no-preference"
+
+        We can specify within a prefers-reduced-motion media rule whose user's browser setting is "no-preference"
+        that the scroll-behaviour should be smooth.
+
+        VIA  @media (prefers-reduced-motion: no-preference)
+
+
+
+
+  * Access Key attribute:
+
+        the navigation accessibility can be improved by providing keyboard shortcuts.
+        The accesskey attribute accepts a space-separated list of access keys.
+
+        For example: <button type="submit" accesskey="s">Submit</button>
+
+        Note: It is not always advised to use access keys, but they can be useful.
+
+
+  * Text-Decoration property:
+
+
+
+  * padding-inline-start property:
+
+
+  * list-style property (removing bullet point):
+      
+
+
+-->
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="freeCodeCamp Accessibility Quiz practice project" />
+  <title>Accessibility Quiz</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- THE HEADER (flex-box) -->
+  <header>
+    <img id="logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg">
+
+    <h1>HTML/CSS Quiz</h1>
+
+    <nav>
+      <ul>
+        <li><a href="#student-info">INFO</a></li>
+        <li><a href="#html-questions">HTML</a></li>
+        <li><a href="#css-questions">CSS</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+
+  <!-- THE MAIN -->
+  <main>
+
+    <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz">
+
+      <!-- SECTION 1 INFO -->
+      <section role="region" aria-labelledby="student-info">
+
+        <h2 id="student-info">Student Info</h2>
+
+        <div class="info">
+          <label for="student-name">Name:</label>
+          <input type="text" name="student-name" id="student-name" />
+        </div>
+
+        <div class="info">
+          <label for="student-email">Email:</label>
+          <input type="email" name="student-email" id="student-email" />
+        </div>
+
+        <div class="info">
+          <label for="birth-date">D.O.B.<span class="sr-only">(Date of Birth)</span></label>
+          <input type="date" name="birth-date" id="birth-date" />
+        </div>
+
+      </section>
+
+
+      <!-- SECTION 2 -->
+      <section role="region" aria-labelledby="html-questions">
+
+        <h2 id="html-questions">HTML</h2>
+
+        <div class="question-block">
+          <p>1</p>
+
+          <fieldset class="question" name="html-question-one">
+            <legend>
+              True/False Question
+            </legend>
+            <ul class="answers-list">
+
+              <li>
+                <label for="q1-a1">
+                  <input type="radio" id="q1-a1" name="q1" value="true" />
+                  True
+                </label>
+              </li>
+
+              <li>
+                <label for="q1-a2">
+                  <input type="radio" id="q1-a2" name="q1" value="false" />
+                  False
+                </label>
+              </li>
+
+            </ul>
+
+          </fieldset>
+        </div>
+
+
+        <div class="question-block">
+          <p>2</p>
+          <fieldset class="question" name="html-question-two">
+            <legend>
+              True/False Question
+            </legend>
+            <ul class="answers-list">
+              <li>
+                <label for="q2-a1">
+                  <input type="radio" id="q2-a1" name="q2" value="true" />
+                  True
+                </label>
+              </li>
+              <li>
+                <label for="q2-a2">
+                  <input type="radio" id="q2-a2" name="q2" value="false" />
+                  False
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+      </section>
+
+
+      <!-- SECTION 3 (CSS) -->
+      <section role="region" aria-labelledby="css-questions">
+
+        <h2 id="css-questions">CSS</h2>
+
+        <div class="formrow">
+
+          <div class="question-block">
+            <label for="customer">Are you a frontend developer?</label>
+          </div>
+          <div class="answer">
+            <select name="customer" id="customer" required>
+              <option value="">Select an option</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+
+          <div class="question-block">
+            <label for="css-questions">Do you have any questions:</label>
+          </div>
+          <div class="answer">
+            <textarea id="css-questions" name="css-questions" rows="5" cols="24"
+              placeholder="Who is flexbox..."></textarea>
+          </div>
+
+        </div>
+      </section>
+
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+  <footer>
+    <address>
+      <a href="https://freecodecamp.org">freeCodeCamp</a><br />
+      San Francisco<br />
+      California<br />
+      USA
+    </address>
+  </footer>
+</body>
+
+</html>
