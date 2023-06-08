@@ -1,3 +1,14 @@
+<p align="center">
+<img src="./ReadMe-Images/Front-End-Project-banner.png">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML-E34F26.svg" alt="HTML badge" style="height: 25px;">
+  <img src="https://img.shields.io/badge/CSS-1572B6.svg" alt="CSS badge" style="height: 25px;"> 
+  <img src="https://img.shields.io/badge/Accesibility-F7DF1E.svg" alt="Accessibility badge" style="height: 25px;">
+</p>
+
+
 # Accessibility-Quiz-Page
 This project is a practice quiz for HTML and CSS concepts.<br />
 It features a responsive layout, semantic HTML, and accessibility enhancements. <br />
